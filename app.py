@@ -6,7 +6,7 @@ from ultralytics import YOLO
 
 @st.cache_resource(allow_output_mutation=True)
 def load_models():
-    pose_model = YOLO('weights/best.pt')
+    pose_model = YOLO('best.pt')
     gru_model = tf.keras.models.load_model('cheating_gru_model(0.88ac, 0.97 val).keras')
     return pose_model, gru_model
 
